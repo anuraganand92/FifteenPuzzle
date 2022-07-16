@@ -1,0 +1,327 @@
+*::selection {
+    color: none;
+}
+
+body {
+    background-color: rgba(62, 66, 180, 0.904);
+    font-family: sans-serif;
+    margin: 0;
+    min-width: 600px;
+} 
+
+.info {
+    color: white;
+    text-align: center;
+    font-size: medium;
+}
+
+#menuDiv {
+    margin-top: 5px;
+    width: 100%;
+} 
+
+#imgSlider {
+    width: 100%;
+    font-size: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#borderImg {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    outline: 5px solid black;
+    margin-top: 10px;
+}
+
+#images {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    left: -180px;
+}
+
+.slideImg {
+    width: 180px;
+    height: 180px;
+}
+
+.arrow {
+    cursor: pointer;
+    margin: 0;
+    padding: 0 16px;
+    -webkit-text-stroke: 1px white;
+}
+
+#interactionDiv {
+    width: 610px;
+    margin: 10px auto;
+    display: flex;
+}
+
+#buttonsModeDiv {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 6px 14px;
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    background-color:  rgb(44, 41, 41);
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(97, 87, 87);
+}
+
+.white {
+    border-color: white;
+}
+
+#timerDiv {
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#timerDiv img {
+    height: 35px;
+}
+
+#baseElementsDiv {
+    width: 60%;
+    height: 100px;
+}
+
+#leftSideDiv, #rightSideDiv {
+    width: 20%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#leftSideDiv button {
+    margin: 5px 0;
+    padding: 5px 0;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#leftSideDiv button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#labelMoves {
+    color: white;
+    font-size: 22px;
+    padding-top: 5px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+
+#countMoves {
+    padding: 5px 0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+
+#gameDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#arena {
+    width: 600px;
+    height: 600px;
+    outline: 5px solid black;
+    position: relative;
+}
+
+.puzzle {
+    box-sizing: border-box;
+    background-size: 600px;
+    border: 1px solid black;
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    padding-top: 15px;
+    font-size: 25px;
+    color: rgb(106, 220, 243);
+}
+
+.puzzleAfter::after { 
+    content: attr(data-number);
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.blackScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 27, 27, 0.9);
+}
+
+.mainAlertDiv {
+    background-color:  rgb(23, 23, 23);
+    border: 5px solid white;
+    border-radius: 15px;
+    z-index: 10;
+    position: absolute;
+}
+
+.infoDiv {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.winAlert {
+    width: 360px;
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    line-height: 200%;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 180px);
+}
+
+#inputName {
+    margin-top: 10px;
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    height: 30px;
+    font-size: 18px;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+#inputName::selection {
+    color: white;
+    background-color: black;
+}
+
+#submitBtn {
+    width: 60%;
+    height: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 15px;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.rankingAlert {
+    width: 550px;
+    height: 750px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    line-height: 200%;
+    top: calc(50% - 375px);
+    left: calc(50% - 275px);
+}
+
+#infoDivRanking {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#titleRanking {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#imgRanking {
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#infoImgRanking {
+    font-style: italic;
+}
+
+#rankingTable {
+    width: 100%;
+    height: 450px;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+}
+
+#rankingTable th {
+    font-size: 30px;
+}
+
+.closeAlertBtn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    border: 2px solid rgb(255, 249, 249);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.closeAlertBtn:hover {
+    background-color: rgba(198, 83, 83, 0.888);
+}
